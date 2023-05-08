@@ -28,3 +28,12 @@ elsif i%3==1 # else if のこと
 else
     puts "2"
 end
+
+# 繰り返し
+# rubyの繰り返しは基本while
+i=5
+while i>0
+    print "#" # putsは改行あり printは改行なし
+    i-=1 # rubyには-- ++ はない
+end
+puts
