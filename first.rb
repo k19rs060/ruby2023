@@ -37,3 +37,33 @@ while i>0
     i-=1 # rubyには-- ++ はない
 end
 puts
+
+# 配列
+ia = [1, 5, 10]
+puts ia[0]
+sa = ["a", "b"]
+puts sa[1]
+xa = [1, "a", 10, [5,3]]
+puts xa[2]
+puts xa[3][0]
+
+l=0
+while l<ia.length
+    print ia[l]
+    print ","
+    l+=1
+end
+puts
+
+# 拡張
+xa.each do |i|
+    print i
+    print ","
+end
+puts
+
+# n回繰り返すとき
+6.times do
+    print "*"
+end
+puts
