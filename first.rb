@@ -67,3 +67,12 @@ puts
     print "*"
 end
 puts
+
+#入力
+s=gets
+# s=s.chomp # 改行コードを取り除く方法
+s.chomp! # s.chomp == s=s.chomp
+puts "##"+s+"**"
+p s # p デバック用のコマンド
+p 1
+p "1"
