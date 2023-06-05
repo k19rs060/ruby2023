@@ -1,9 +1,8 @@
 #コマンドライン引数の値を画面に表示
-msg = ARGV
-
+msg=""
 i=0
-while i<msg.length
-    print msg[i].to_s+" "
+while i<ARGV.length
+    msg += ARGV[i].to_s+" "
     i+=1
 end
-puts
+puts msg
