@@ -9,9 +9,10 @@ def server s
 end
 
 gs = TCPServer.open 8080
-s = gs.accept
 
 while true
     s = gs.accept
-    server s
+    Thread.new do #新しいプログラムカウンタを作成するもの
+        server s
+    end
 end
