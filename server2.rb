@@ -4,9 +4,10 @@ def server s
     cmd,path,ver = s.gets.chomp.split(" ")
 
     if path == "/now"
-        time = Time.now
-        puts time
-        s.puts time
+        puts Time.now
+        s.puts "HTTP 1.1 200 OK"
+        s.puts 
+        s.puts Time.now
     elsif path == "/hello"
         puts "hello world!"
         s.puts "HTTP/1.1 200 OK"
