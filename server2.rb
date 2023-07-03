@@ -1,12 +1,32 @@
 require "socket"
 
 def server s
-    while line=s.gets
-        line.chomp!
-        puts line
-        s.puts line
-        break if line==""
+    cmd,path,ver = s.gets.chomp.split(" ")
+
+    if path == "/now"
+        time = Time.now
+        puts time
+        s.puts time
+    elsif path == "/hello"
+        puts "hello world!"
+        s.puts "HTTP/1.1 200 OK"
+        s.puts "Content-Type: text/html"
+        s.puts 
+        s.puts "<DOCTYPE html>"
+        s.puts "<html><body><h1>Hello, World!</h1></body>"
+    elsif path == "/"
+        while line=s.gets
+            line.chomp!
+            puts line
+            s.puts line
+            break if line==""
+        end
+    else
+        s.puts "HTTP/1.0 404 Not Found"
+        s.puts 
+        s.puts "404 Not Found"
     end
+
     s.close
 end
 
