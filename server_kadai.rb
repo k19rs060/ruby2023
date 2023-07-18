@@ -245,6 +245,7 @@ def server s
 
         #head ↓ここから
         s.puts "HTTP/1.1 200 OK"
+        s.puts 'Content-Type: text/plain; charset="UTF-8"'
         s.puts
 
         #body ↓ここから

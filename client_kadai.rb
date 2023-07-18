@@ -8,7 +8,7 @@ path1 = ARGV[1] #世代
 if ARGV.size==3
     path2 = ARGV[2]
 else
-    path2 = "uni"
+    path2 = ""
 end
 
 #ex)GET /-p/○ HTTP/1.1
